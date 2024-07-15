@@ -3,44 +3,37 @@ from PIL import ImageTk, Image
 
 rt = Tk()
 rt.title("Basic Calculator")
-
-
-rt.iconbitmap(r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\Calc-icon.ico')
+# Change path of ico file here
+rt.iconbitmap(r'Location\Calc-icon.ico')
 
 rt.geometry("300x430")
-
-
-#Background
-
-bg = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\300x430_bg.png')
+# Change path of Background file here
+bg = ImageTk.PhotoImage(file=r'Location\300x430_bg.png')
 bg_label = Label(rt, image=bg).place(x=0, y=0)
 
-
 # Entry Widget
-
 e = Entry(rt, width=35, borderwidth=10, font=("Times", 10))
 e.grid(row=0, column=0, pady=20, padx=30, columnspan=3)
 
-#Paths
+# CHANGE YOUR PATHS HERE..!!!!!
+# Example Img1 = ImageTk.PhotoImage(file="YOUR PATH HERE")
 
-Img1 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\1.png')
-Img2 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\2.png')
-Img3 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\3.png')
-Img4 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\4.png')
-Img5 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\5.png')
-Img6 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\6.png')
-Img7 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\7.png')
-Img8 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\8.png')
-Img9 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\9.png')
-Img0 = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\10.png')
-ImgA = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\11.png')
-ImgS = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\12.png')
-ImgM = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\13.png')
-ImgD = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\14.png')
-ImgE = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\15.png')
-ImgCLR = ImageTk.PhotoImage(file=r'C:\Users\SUNANDAN PC\OneDrive\Desktop\Projects\Python-GUI-Project-master\Calculator with Images\calculator_buttons_50x50\16.png')
-
-
+Img1 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\1.png')
+Img2 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\2.png')
+Img3 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\3.png')
+Img4 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\4.png')
+Img5 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\5.png')
+Img6 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\6.png')
+Img7 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\7.png')
+Img8 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\8.png')
+Img9 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\9.png')
+Img0 = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\10.png')
+ImgA = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\11.png')
+ImgS = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\12.png')
+ImgM = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\13.png')
+ImgD = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\14.png')
+ImgE = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\15.png')
+ImgCLR = ImageTk.PhotoImage(file=r'Location\calculator_buttons_50x50\16.png')
 
 def button_click(number):
     current = e.get()
@@ -94,7 +87,6 @@ def button_equals():
 
 def button_clear():
     e.delete(0, END)
-
 
 # Defining Buttons
 button1 = Button(rt, border="3", image=Img1, command=lambda: button_click(1)).grid(row=1, column=0)
